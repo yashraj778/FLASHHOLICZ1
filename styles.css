@@ -10,6 +10,8 @@ background:#111;
 color:white;
 }
 
+/* NAVBAR */
+
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -18,10 +20,20 @@ padding:20px 10%;
 background:black;
 position:fixed;
 width:100%;
+z-index:1000;
 }
 
 .logo{
-color:#ff4c4c;
+display:flex;
+align-items:center;
+font-weight:600;
+color:white;
+}
+
+.flash{
+color:#00eaff;
+margin-right:6px;
+font-size:22px;
 }
 
 .nav-links{
@@ -37,8 +49,10 @@ font-weight:500;
 }
 
 .nav-links a:hover{
-color:#ff4c4c;
+color:#00eaff;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -46,7 +60,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429') center/cover no-repeat;
+
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("Flasholicz_notice pic.png");
+
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
@@ -60,11 +80,13 @@ margin:20px 0;
 .hero button{
 padding:12px 30px;
 border:none;
-background:#ff4c4c;
-color:white;
+background:#00eaff;
+color:black;
 font-size:16px;
 cursor:pointer;
 }
+
+/* SERVICES */
 
 .services{
 padding:100px 10%;
@@ -84,12 +106,14 @@ background:#1e1e1e;
 padding:30px;
 border-radius:10px;
 width:280px;
+transition:0.3s;
 }
 
 .service-card:hover{
 transform:translateY(-10px);
-transition:0.3s;
 }
+
+/* PORTFOLIO */
 
 .portfolio{
 padding:100px 10%;
@@ -108,10 +132,14 @@ width:100%;
 border-radius:10px;
 }
 
+/* ABOUT */
+
 .about{
 padding:100px 20%;
 text-align:center;
 }
+
+/* CONTACT */
 
 .contact{
 padding:100px 10%;
@@ -126,7 +154,7 @@ max-width:400px;
 margin:auto;
 }
 
-input, textarea{
+input,textarea{
 padding:12px;
 border:none;
 border-radius:5px;
@@ -135,14 +163,51 @@ border-radius:5px;
 button{
 padding:12px;
 border:none;
-background:#ff4c4c;
-color:white;
+background:#00eaff;
+color:black;
 cursor:pointer;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
 background:black;
 margin-top:50px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.navbar{
+padding:15px 5%;
+}
+
+.nav-links{
+gap:15px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.services{
+padding:80px 5%;
+}
+
+.about{
+padding:80px 10%;
+}
+
+.contact{
+padding:80px 5%;
+}
+
 }
